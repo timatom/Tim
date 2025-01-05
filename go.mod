@@ -1,4 +1,4 @@
-module github.com/timatom/timrollings
+module github.com/timatom/Tim
 
 go 1.18
 
