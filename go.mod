@@ -1,4 +1,4 @@
-module github.com/sergeyklay/gohugo-theme-ed
+module github.com/timatom/timrollings
 
 go 1.18
 
