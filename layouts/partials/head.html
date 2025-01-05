@@ -16,6 +16,12 @@
 
     {{ partial "styles.html" . }}
 
+    {{ if .Site.Params.enableMathJax }}
+        <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    {{ end }}
+
     {{- /* Favicons */}}
     <link rel="icon" href="{{ site.Params.assets.favicon | default "favicon.ico" | relURL }}" sizes="any"><!-- 32×32 -->
     <link rel="icon" href="{{ site.Params.assets.svgicon | default "icon.svg" | relURL }}" type="image/svg+xml">
