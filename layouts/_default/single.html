@@ -22,10 +22,12 @@
         {{ .Content }}
     </div>
 
-    {{/* Post tags are not allowed for drama, narratives and poems */}}
+
+    <!-- For now, I don't want to just list the tags like this. I'd rather just focus on the content for now. -->
+    <!-- {{/* Post tags are not allowed for drama, narratives and poems */}}
     {{ if not (in (slice "drama" "narrative" "poem") $postType) }}
         {{ partial "post-tags.html" . }}
-    {{ end }}
+    {{ end }} -->
 
     {{ partial "comments.html" . }}
 </article>
