@@ -35,7 +35,7 @@
   "home_page_url": {{ printf "%s?utm_source=json_feed" site.BaseURL  | absURL | jsonify }},
   {{ with .OutputFormats.Get "JSON" }}"feed_url": {{ .Permalink | absURL | jsonify }},{{ end }}
   {{ with site.Params.description}}"description": {{ site.Params.description | jsonify }},{{ end }}
-  {{- $logo := resources.Get (site.Params.assets.logo | default "/img/open-graph-logo.png") }}{{ $logo = $logo.Resize "96x96" }}
+  {{- $logo := resources.Get (site.Params.assets.logo | default "logo-192x192.png") }}{{ $logo = $logo.Resize "96x96" }}
   "icon": {{ $logo.Permalink | jsonify }},
   "favicon": {{ $logo.Permalink | jsonify }},
   {{ with $authorName }}"authors": [
