@@ -12,9 +12,11 @@
     {{ end }}
 
     {{/* Render posts list */}}
-    <div class="post-list">
+    <div class="post-list" style="margin: 0; padding-left: 1rem;">
         {{ range .Paginator.Pages }}
+        <li class="post-item" style="margin-bottom: -0.5rem;">
             {{ .Render "teaser" }}
+        </li>
         {{ end }}
 
         {{ partial "pagination.html" . }}
